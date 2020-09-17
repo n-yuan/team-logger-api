@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://arissa:arissa@teamlogger.pdn0z.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}

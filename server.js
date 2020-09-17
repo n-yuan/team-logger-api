@@ -1,6 +1,9 @@
 const express = require("express");
-
+const connectDB = require("./config/db");
 const app = express();
+
+//Connect Database
+connectDB();
 
 //Define Routes
 app.use("/api/logs", require("./routes/logs"));
