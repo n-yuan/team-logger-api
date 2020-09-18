@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const Log = require("../models/Log");
+
 // @route GET api/logs
 // @desc Get all team logs
 // @access Private
@@ -37,7 +39,7 @@ router.put("/:id", (req, res) => {
 // @desc Search logs
 // @access Private
 
-router.get(`/logs`, (req, res) => {
-  res.send("Search logs");
-});
+// router.get(`/logs`, (req, res) => {
+//   res.send("Search logs");
+// });
 module.exports = router;

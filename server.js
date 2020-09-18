@@ -5,10 +5,14 @@ const app = express();
 //Connect Database
 connectDB();
 
+//Init Middleware
+app.use(express.json({ extended: false }));
+
 //Define Routes
 app.use("/api/logs", require("./routes/logs"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/members", require("./routes/members"));
+app.use("/api/users", require("./routes/users"));
 
 const PORT = process.env.PORT || 5000;
 
