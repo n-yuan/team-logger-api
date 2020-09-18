@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const LogSchema = mongoose.Schema({
+  id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "id",
+  },
   message: {
     type: String,
     required: true,
