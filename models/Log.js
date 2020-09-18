@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const LogSchema = mongoose.Schema({
-  id: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "id",
+    ref: "users",
   },
   message: {
     type: String,
