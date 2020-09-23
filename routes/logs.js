@@ -90,7 +90,7 @@ router.put("/:id", auth, async (req, res) => {
   const logFields = {};
   if (message) logFields.message = message;
   if (member) logFields.member = member;
-  if (attention) logFields.attention = attention;
+  if (typeof attention === "boolean") logFields.attention = attention;
 
   try {
     let log = await Log.findById(req.params.id);
