@@ -40,11 +40,14 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { firstName, lastName } = req.body;
+    const { firstName, lastName, title, email, phone } = req.body;
     try {
       const newMember = new Member({
         firstName,
         lastName,
+        title,
+        email,
+        phone,
         user: req.user.id,
       });
       const member = await newMember.save();

@@ -13,6 +13,18 @@ const MemberSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  title: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("member", MemberSchema);
